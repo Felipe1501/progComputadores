@@ -1,17 +1,27 @@
 #include <stdio.h>
 
-int main() {
+int main(){
 
-    int minutos, segundos, horas;
+    int  x, y;
 
 
-    scanf("%i",&segundos);
+    do{
+        scanf("%i %i", &x, &y);
 
-    horas = segundos / 3600;
-    segundos -= horas * 3600;
-    minutos = segundos / 60;
-    segundos -= minutos * 60;
+        if(x>y){
 
-    printf("%i:%i:%i\n", horas, minutos, segundos);
+            printf("Decrescente\n");
+
+        }
+        else if(y>x){
+
+            printf("Crescente\n");
+        }
+
+    }
+    while (x!=y);
+
+    printf("Acabou!\n");
+
     return 0;
 }
